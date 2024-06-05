@@ -13,5 +13,7 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 add_executable (extract_indices extract_indices.cpp)
+add_executable (register_clouds registration.cpp)
 target_link_libraries (extract_indices ${PCL_LIBRARIES}
                                         gtsam)
+target_link_libraries (register_clouds ${PCL_LIBRARIES})

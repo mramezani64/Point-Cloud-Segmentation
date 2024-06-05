@@ -89,6 +89,11 @@ main (int argc, char** argv)
      cloud_sampled_out->points[idx].rgb = rgb;
    }
  }
+  pcl::visualization::CloudViewer viewer("Simple Cloud Viewer");
+  viewer.showCloud(cloud_in);
+  while (!viewer.wasStopped())
+  {
+  }
   
   // Write the segments to disk
   pcl::PCDWriter writer;
